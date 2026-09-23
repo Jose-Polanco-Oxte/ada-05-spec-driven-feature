@@ -1,0 +1,66 @@
+[
+  {
+    "id": "CUST-001",
+    "name": "María José Gómez",
+    "email": "maria.gomez@empresa.com",
+    "phone": "+52 999 123 4567",
+    "is_active": true,
+    "created_at": "2024-01-10T08:30:00Z"
+  },
+  {
+    "id": "CUST-002",
+    "name": "Carlos Pérez Rodríguez",
+    "email": "carlos.perez@consultoria.org",
+    "phone": "+52 999 234 5678",
+    "is_active": true,
+    "created_at": "2024-01-15T09:15:00Z"
+  },
+  {
+    "id": "CUST-003",
+    "name": "Ana Sofía García",
+    "email": "ana.garcia@uady.mx",
+    "phone": "+52 999 345 6789",
+    "is_active": true,
+    "created_at": "2024-02-01T11:00:00Z"
+  },
+  {
+    "id": "CUST-004",
+    "name": "José Ángel Morales",
+    "email": "jose.morales@techcorp.com",
+    "phone": "+52 999 456 7890",
+    "is_active": false,
+    "created_at": "2024-02-10T14:20:00Z"
+  },
+  {
+    "id": "CUST-005",
+    "name": "Roberto Gómez Bolaños",
+    "email": "alex.gomez@mail.com",
+    "phone": "+52 999 567 8901",
+    "is_active": true,
+    "created_at": "2024-02-18T16:45:00Z"
+  },
+  {
+    "id": "CUST-006",
+    "name": "Lucía Méndez López",
+    "email": "lucia.mendez@servicios.net",
+    "phone": "+52 999 678 9012",
+    "is_active": false,
+    "created_at": "2024-03-01T10:10:00Z"
+  },
+  {
+    "id": "CUST-007",
+    "name": "Fernando Castillo",
+    "email": "fernando.castillo@innovacion.io",
+    "phone": "+52 999 789 0123",
+    "is_active": true,
+    "created_at": "2024-03-05T12:00:00Z"
+  },
+  {
+    "id": "CUST-008",
+    "name": "Valeria Sánchez",
+    "email": "valeria.sanchez@uady.mx",
+    "phone": "+52 999 890 1234",
+    "is_active": true,
+    "created_at": "2024-03-12T17:30:00Z"
+  }
+]
