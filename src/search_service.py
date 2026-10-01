@@ -37,7 +37,7 @@ class CustomerSearchService:
     Servicio encargado de validar consultas y realizar la búsqueda de clientes.
     """
 
-    ALLOWED_FIELDS = {"all", "name", "email"}
+    ALLOWED_FIELDS = {"all", "name", "email", "phone"}
     ALLOWED_STATUSES = {"all", "active", "inactive"}
 
     def __init__(self, repository: CustomerRepository):
@@ -102,13 +102,16 @@ class CustomerSearchService:
             match = False
             norm_name = normalize_text(customer.name)
             norm_email = normalize_text(customer.email)
+            norm_phone = normalize_text(customer.phone)
 
             if field == "name":
                 match = norm_query in norm_name
             elif field == "email":
                 match = norm_query in norm_email
+            elif field == "phone":
+                match = norm_query in norm_phone
             elif field == "all":
-                match = (norm_query in norm_name) or (norm_query in norm_email)
+                match = (norm_query in norm_name) or (norm_query in norm_email) or (norm_query in norm_phone)
 
             if match:
                 results.append(customer)
