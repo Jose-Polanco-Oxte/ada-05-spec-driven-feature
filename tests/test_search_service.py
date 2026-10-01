@@ -95,3 +95,19 @@ def test_search_results_alphabetical_order(search_service):
     # jose.morales@corp.com, maria@example.com, alex.gomez@mail.com
     names = [c.name for c in results]
     assert names == sorted(names, key=normalize_text)
+
+
+def test_search_by_phone_partial():
+    customers = [
+        Customer(id="C-P1", name="Carlos García", email="carlos@example.com", phone="+52 999 123 4567"),
+        Customer(id="C-P2", name="Ana Ruiz", email="ana@example.com", phone="+52 999 987 6543"),
+    ]
+    service = CustomerSearchService(repository=CustomerRepository(data_source=customers))
+    results = service.search("123", field="phone")
+    assert len(results) == 1
+    assert results[0].id == "C-P1"
+
+    results_all = service.search("987", field="all")
+    assert len(results_all) == 1
+    assert results_all[0].id == "C-P2"
+

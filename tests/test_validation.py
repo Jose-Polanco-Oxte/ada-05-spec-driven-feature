@@ -42,8 +42,8 @@ def test_query_too_short_error(dummy_service):
 
 
 def test_invalid_field_error(dummy_service):
-    with pytest.raises(InvalidFieldError, match="Campo 'phone' no válido."):
-        dummy_service.search("test", field="phone")
+    with pytest.raises(InvalidFieldError, match="Campo 'address' no válido."):
+        dummy_service.search("test", field="address")
 
 
 def test_invalid_status_filter_error(dummy_service):

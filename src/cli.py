@@ -66,9 +66,9 @@ def build_parser() -> argparse.ArgumentParser:
     )
     parser.add_argument(
         "-f", "--field",
-        choices=["all", "name", "email"],
+        choices=["all", "name", "email", "phone"],
         default="all",
-        help="Campo sobre el cual buscar: 'all' (nombre o correo), 'name' (solo nombre), 'email' (solo correo). Por defecto: all."
+        help="Campo sobre el cual buscar: 'all' (nombre, correo o teléfono), 'name' (solo nombre), 'email' (solo correo), 'phone' (solo teléfono). Por defecto: all."
     )
     parser.add_argument(
         "-s", "--status",
